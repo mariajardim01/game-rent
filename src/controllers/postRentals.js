@@ -1,5 +1,5 @@
 
-import { db } from "../src/database.connection.js";
+import { db } from "../database.connection.js";
 import { invalidBody } from "../errors/gamesError.js";
 import { getUser } from "../repositories/userRepository.js";
 import { unprocessableEntity } from "../errors/rentalError.js";

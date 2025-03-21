@@ -1,4 +1,4 @@
-import { db } from "../src/database.connection.js"
+import { db } from "../database.connection.js"
 import status from "http-status"
 import { getUserByCpf } from "../repositories/userRepository.js"
 import { userDataValidation } from "../services/userService.js"

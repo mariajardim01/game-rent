@@ -1,6 +1,6 @@
 import { getRental } from "../repositories/rentalsRepository.js";
 import { unprocessableEntity } from "../errors/rentalError.js";
-import { db } from "../src/database.connection.js";
+import { db } from "../database.connection.js";
 import dateNow from "./dateNow.js";
 import status from "http-status";
 import returnValidation from "../services/returnService.js";

@@ -1,6 +1,6 @@
 import { getRental } from "../repositories/rentalsRepository.js";
 import { badRequest } from "../errors/rentalError.js";
-import { db } from "../src/database.connection.js";
+import { db } from "../database.connection.js";
 import status from "http-status";
 import { deleteRentalById } from "../repositories/rentalsRepository.js";
 
