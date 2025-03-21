@@ -4,11 +4,11 @@ import { userSchema } from "../schemas/userSchema.js";
 import { postUser } from "../controllers/postUser.js";
 import { getUserById } from "../controllers/getUserById.js";
 import { getUsers } from "../controllers/getUsers.js";
-const userRouter = Router()
+const customersRouter = Router()
 
-userRouter.post('/users', midSchemaValidation(userSchema), postUser)
-userRouter.get('/users/:id', getUserById)
-userRouter.get('/users', getUsers)
+customersRouter.post('/customers', midSchemaValidation(userSchema), postUser)
+customersRouter.get('/customers/:id', getUserById)
+customersRouter.get('/customers', getUsers)
 
 
-export default userRouter;
+export default customersRouter;

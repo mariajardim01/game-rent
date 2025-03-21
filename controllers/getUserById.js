@@ -1,5 +1,5 @@
 import status from "http-status";
-import { getUser } from "../repositories/getUser.js";
+import { getUser } from "../repositories/userRepository.js";
 
 export async function getUserById(req,res) {
 

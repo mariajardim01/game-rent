@@ -1,10 +1,9 @@
 import { db } from "../src/database.connection.js"
-import { invalidBody, conflict } from "../errors/gamesError.js"
 import status from "http-status"
-import { getUserByCpf } from "../repositories/getUserByCpf.js"
-import userDataValidation from "../services/userDataValidation.js"
-import userAlreadyExistOnDB from "../services/userAlreadyExistOnDB.js"
-import { postUserDB } from "../repositories/postUserDB.js"
+import { getUserByCpf } from "../repositories/userRepository.js"
+import { userDataValidation } from "../services/userService.js"
+import { userAlreadyExistOnDB } from "../services/userService.js"
+import { postUserDB } from "../repositories/userRepository.js"
 export async function postUser(req,res) {
     
     userDataValidation(req.body.cpf, req.body.phone)

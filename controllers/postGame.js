@@ -1,8 +1,8 @@
 import { db } from "../src/database.connection.js";
 import status from "http-status";
 import { conflict } from "../errors/gamesError.js";
-import { alreadyExistOnDB } from "../services/alreadyExistOnDB.js";
-import { postGameDB } from "../repositories/postGameDB.js";
+import { alreadyExistOnDB } from "../services/serviceUtils.js";
+import { postGameDB } from "../repositories/gamesRepository.js";
 
 
 export async function postGame(req, res) {

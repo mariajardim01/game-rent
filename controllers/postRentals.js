@@ -1,16 +1,15 @@
 
 import { db } from "../src/database.connection.js";
 import { invalidBody } from "../errors/gamesError.js";
-import { getUser } from "../repositories/getUser.js";
+import { getUser } from "../repositories/userRepository.js";
 import { unprocessableEntity } from "../errors/rentalError.js";
 import status from "http-status";
 import dateNow from "./dateNow.js";
-import { notEnoughDays } from "../services/notEnoughDays.js";
-import { getGame } from "../repositories/getGame.js";
-import gameUnavailable from "../services/gameUnavailable.js";
-import { postRentalDB } from "../repositories/postRentalDB.js";
-import { selectObj } from "../repositories/selectObj.js";
-import { getRentalsByGame } from "../repositories/getRentalsByGame.js";
+import { notEnoughDays } from "../services/serviceUtils.js";
+import { getGame } from "../repositories/gamesRepository.js";
+import gameUnavailable from "../services/gameService.js";
+import { postRentalDB } from "../repositories/rentalsRepository.js";
+import { getRentalsByGame } from "../repositories/rentalsRepository.js";
 
 
 export async function postRentals(req,res) {
