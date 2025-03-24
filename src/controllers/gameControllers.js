@@ -1,8 +1,12 @@
-import { db } from "../database.connection.js";
-import status from "http-status";
-import { conflict } from "../errors/gamesError.js";
+import status from "http-status"
+import { getAllGames } from "../repositories/gamesRepository.js"
 import { alreadyExistOnDB } from "../services/serviceUtils.js";
 import { postGameDB } from "../repositories/gamesRepository.js";
+
+export async function getGames(req,res) {
+    const games =  await getAllGames()
+    return res.send(games.rows).status(status.OK)
+}
 
 
 export async function postGame(req, res) {

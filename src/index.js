@@ -1,9 +1,8 @@
 import express from "express"
 import "express-async-errors";
 import dotenv from "dotenv"
-import { db } from "./database.connection.js"
-import router from "../routers/router.js";
-import { errorHandler } from "../middlewares/errorHandler.js"
+import router from "./routers/router.js";
+import { errorHandler } from "./middlewares/errorHandler.js"
 
 
 dotenv.config()
